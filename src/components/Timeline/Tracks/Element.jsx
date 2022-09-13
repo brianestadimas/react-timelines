@@ -18,14 +18,15 @@ const Element = props => {
   return (
     <div className="rt-track__element" style={elementStyle} onClick={clickElement && handleClick && handleClick}>
       <BasicElement
-        title={title}
         start={start}
         end={end}
         style={style}
         classes={classes}
         dataSet={dataSet}
         tooltip={tooltip}
-      />
+      >
+      {title}
+      </BasicElement>
     </div>
   )
 }
@@ -37,7 +38,7 @@ Element.propTypes = {
   style: PropTypes.shape({}),
   classes: PropTypes.arrayOf(PropTypes.string.isRequired),
   dataSet: PropTypes.shape({}),
-  title: PropTypes.node,
+  title: PropTypes.node.isRequired,
   start: PropTypes.instanceOf(Date).isRequired,
   end: PropTypes.instanceOf(Date).isRequired,
   tooltip: PropTypes.string,

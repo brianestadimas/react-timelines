@@ -11,18 +11,15 @@ const buildDataAttributes = (attributes = {}) => {
   return value
 }
 
-const Basic = ({ title, start, end, style, classes, dataSet, tooltip }) => (
+const Basic = ({ start, end, style, classes, dataSet, tooltip }) => (
   <div className={createClasses('rt-element', classes)} style={style} {...buildDataAttributes(dataSet)}>
-    <div className="rt-element__content" aria-hidden="true">
-      <span>{title}</span>
-    </div>
+    <div className="rt-element__content" aria-hidden="true" />
     <div className="rt-element__tooltip">
       {tooltip ? (
         // eslint-disable-next-line react/no-danger
         <div dangerouslySetInnerHTML={{ __html: tooltip.split('\n').join('<br>') }} />
       ) : (
         <div>
-          <div>{title}</div>
           <div>
             <strong>Start</strong> {getDayMonth(start)}
           </div>
@@ -36,7 +33,6 @@ const Basic = ({ title, start, end, style, classes, dataSet, tooltip }) => (
 )
 
 Basic.propTypes = {
-  title: PropTypes.string.isRequired,
   start: PropTypes.instanceOf(Date).isRequired,
   end: PropTypes.instanceOf(Date).isRequired,
   style: PropTypes.shape({}),
