@@ -14,7 +14,7 @@ const buildDataAttributes = (attributes = {}) => {
 const Basic = ({ title, start, end, style, classes, dataSet, tooltip }) => (
   <div className={createClasses('rt-element', classes)} style={style} {...buildDataAttributes(dataSet)}>
     <div className="rt-element__content" aria-hidden="true">
-      <span className="rt-element__title">{title}</span>
+      <span>{title}</span>
     </div>
     <div className="rt-element__tooltip">
       {tooltip ? (
