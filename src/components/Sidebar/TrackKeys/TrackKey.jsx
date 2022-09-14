@@ -33,7 +33,7 @@ const TrackKey = ({ track, toggleOpen, clickTrackButton }) => {
             {isOpen ? 'Close' : 'Open'}
           </button>
         )}
-        <span className="rt-track-key__title">{title}</span>
+        <div>{title}</div>
         {buildSideComponent()}
       </div>
       {isOpen && tracks && tracks.length > 0 && <TrackKeys tracks={tracks} toggleOpen={toggleOpen} />}
