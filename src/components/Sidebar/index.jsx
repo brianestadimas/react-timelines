@@ -15,7 +15,10 @@ Sidebar.propTypes = {
   timebar: PropTypes.arrayOf(
     PropTypes.shape({
       id: PropTypes.string.isRequired,
-      title: PropTypes.string,
+      title: PropTypes.oneOfType([
+        PropTypes.string,
+        PropTypes.node
+      ])
     }).isRequired
   ).isRequired,
   tracks: PropTypes.arrayOf(PropTypes.shape({})),
