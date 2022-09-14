@@ -43,7 +43,7 @@ const TrackKey = ({ track, toggleOpen, clickTrackButton }) => {
 
 TrackKey.propTypes = {
   track: PropTypes.shape({
-    title: PropTypes.string.isRequired,
+    title: PropTypes.node.isRequired,
     tracks: PropTypes.arrayOf(PropTypes.shape({})),
     isOpen: PropTypes.bool,
     hasButton: PropTypes.bool,
