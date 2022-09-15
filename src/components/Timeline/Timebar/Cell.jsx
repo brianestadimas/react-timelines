@@ -11,10 +11,7 @@ Cell.propTypes = {
   time: PropTypes.shape({
     toStyleLeftAndWidth: PropTypes.func,
   }),
-  title: PropTypes.oneOfType([
-    PropTypes.string,
-    PropTypes.node
-  ]),
+  title: PropTypes.string,
   start: PropTypes.instanceOf(Date).isRequired,
   end: PropTypes.instanceOf(Date).isRequired,
 }
